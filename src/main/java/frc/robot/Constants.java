@@ -14,8 +14,9 @@ package frc.robot;
  */
 public final class Constants {
 
-    public static final int leftFrontCANID = 0;
-	public static final int rightFrontCANID = 0;
-	public static final int leftRearCANID = 0;
-	public static final int rightRearCANID = 0;
+    // Drivetrain motors
+    public static final int leftFrontCANID = 11;
+	public static final int rightFrontCANID = 12;
+	public static final int leftRearCANID = 13;
+	public static final int rightRearCANID = 14;
 }
