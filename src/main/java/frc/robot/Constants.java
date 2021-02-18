@@ -23,5 +23,8 @@ public final class Constants {
     //Controller Drive Axis
 	public static final int leftTankAxis = 1;
 	public static final int rightArcadeAxis = 5;
-	public static final int rightTankAxis = 4;
+    public static final int rightTankAxis = 4;
+    
+    //Xbox USB Port
+	public static final int xboxControllerPort = 0;
 }

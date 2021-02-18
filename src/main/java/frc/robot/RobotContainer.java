@@ -28,6 +28,12 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
+    // Drivetrain
+    driveTrain = new DriveTrain();
+
+    // Controller
+    controller = new XboxController(Constants.xboxControllerPort);
+
     // Configure the button bindings
     configureButtonBindings();
   }
