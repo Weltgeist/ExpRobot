@@ -51,7 +51,17 @@ public class Robot extends TimedRobot {
   public void disabledInit() {}
 
   @Override
-  public void disabledPeriodic() {}
+  public void disabledPeriodic() {
+    
+    System.out.println(RobotContainer.exampleTrajectory.sample(0.0));
+    System.out.println(RobotContainer.exampleTrajectory.sample(0.5));
+    System.out.println(RobotContainer.exampleTrajectory.sample(1));
+    System.out.println(RobotContainer.exampleTrajectory.sample(1.5));
+    System.out.println(RobotContainer.exampleTrajectory.sample(2.0));
+    System.out.println(RobotContainer.exampleTrajectory.sample(2.5));
+    System.out.println(RobotContainer.exampleTrajectory.sample(3.0));
+    System.out.println(RobotContainer.exampleTrajectory.sample(3.5));
+  }
 
   /** This autonomous runs the autonomous command selected by your {@link RobotContainer} class. */
   @Override
