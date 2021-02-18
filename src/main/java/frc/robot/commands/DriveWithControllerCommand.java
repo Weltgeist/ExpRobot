@@ -5,11 +5,15 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.DriveTrain;
 
 public class DriveWithControllerCommand extends CommandBase {
+  public DriveTrain driveTrain;
   /** Creates a new DriveWithControllerCommand. */
-  public DriveWithControllerCommand() {
+  public DriveWithControllerCommand(DriveTrain dt) {
     // Use addRequirements() here to declare subsystem dependencies.
+    driveTrain = dt;
+    addRequirements(driveTrain);
   }
 
   // Called when the command is initially scheduled.
