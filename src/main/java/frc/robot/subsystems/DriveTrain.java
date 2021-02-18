@@ -40,6 +40,13 @@ public class DriveTrain extends SubsystemBase {
     leftRear.setInverted(true);
     rightRear.setInverted(true);
 
+    // Set-up Controllers for drive modes, group motors for drive
+
+    rightSide = new SpeedControllerGroup(rightFront,rightRear);
+    leftSide = new SpeedControllerGroup(leftFront, leftRear);
+
+    // Set Up drives, will control sets of motors.
+    drive = new DifferentialDrive(leftSide, rightSide);
   }
 
   @Override
