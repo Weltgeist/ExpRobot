@@ -29,10 +29,17 @@ public class DriveTrain extends SubsystemBase {
   
   /** Creates a new DriveTrain. */
   public DriveTrain() {
+    // Setup each of the motors for use later
     leftFront = new WPI_TalonFX(Constants.leftFrontCANID);
     rightFront = new WPI_TalonFX(Constants.rightFrontCANID);
     leftRear = new WPI_TalonFX(Constants.leftRearCANID);
     rightRear = new WPI_TalonFX(Constants.rightRearCANID);
+    // To reverse motor more easier
+    leftFront.setInverted(true);
+    rightFront.setInverted(true);
+    leftRear.setInverted(true);
+    rightRear.setInverted(true);
+
   }
 
   @Override
