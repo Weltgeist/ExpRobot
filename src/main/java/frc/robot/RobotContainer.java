@@ -6,6 +6,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.commands.DriveWithControllerCommand;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
@@ -25,12 +26,14 @@ public class RobotContainer {
 
   private final DriveTrain driveTrain;
   public static XboxController controller;
+  private final DriveWithControllerCommand driveWithControllerCommand;
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Drivetrain
     driveTrain = new DriveTrain();
-
+    driveWithControllerCommand = new DriveWithControllerCommand(driveTrain);
+    driveTrain.setDefaultCommand(driveWithControllerCommand);
     // Controller
     controller = new XboxController(Constants.xboxControllerPort);
 
