@@ -7,6 +7,7 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
 
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
@@ -52,5 +53,20 @@ public class DriveTrain extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+  }
+
+    // Method to control the drive with the controller
+  // controller = Input controller
+  // speedLimiter = value to limit the speed of the motors
+  // if else statement to swap between arcade and tank
+  public void driveWithController(XboxController controller, double speedLimiter) {
+    if (true) {
+      drive.arcadeDrive(controller.getRawAxis(Constants.leftTankAxis) * speedLimiter,
+          controller.getRawAxis(Constants.rightArcadeAxis) * speedLimiter);
+    } else {
+      drive.tankDrive(controller.getRawAxis(Constants.leftTankAxis) * speedLimiter,
+          controller.getRawAxis(Constants.rightTankAxis) * speedLimiter);
+    }
+
   }
 }

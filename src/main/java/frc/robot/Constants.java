@@ -18,5 +18,10 @@ public final class Constants {
     public static final int leftFrontCANID = 11;
 	public static final int rightFrontCANID = 12;
 	public static final int leftRearCANID = 13;
-	public static final int rightRearCANID = 14;
+    public static final int rightRearCANID = 14;
+    
+    //Controller Drive Axis
+	public static final int leftTankAxis = 1;
+	public static final int rightArcadeAxis = 5;
+	public static final int rightTankAxis = 4;
 }
